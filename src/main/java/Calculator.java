@@ -6,6 +6,7 @@ public class Calculator {
         return a-b;
     }
     public int div(int a, int b){
+        // Утена проверка деления на 0
         if (b == 0) {
             throw new RuntimeException("На 0 делить нельзя");
         }
@@ -15,6 +16,7 @@ public class Calculator {
         return a*b;
     }
     public int solver(int a, int b){
+        // Считает сложное выражение вида (a + b) * (a - b)
         return times(add(a, b), dif(a, b));
     }
 }
