@@ -4,11 +4,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorTest {
 
-    Calculator calc = new Calculator();
+    Calculator calc = Calculator.getInstance();
 
     @Test
     void add() {
-        assertEquals(50, calc.add(30, 20));
+        assertEquals(50, calc.plus(30, 20));
     }
 
     @Test
@@ -18,16 +18,16 @@ class CalculatorTest {
 
     @Test
     void div() {
-        assertEquals(22, calc.div(22, 1));
+        assertEquals(22, calc.div(22, 0));
     }
 
     @Test
     void times() {
-        assertEquals(24, calc.times(3, 8));
+        assertEquals(24, calc.multiply(3, 8));
     }
 
     @Test
     void solver() {
-        assertEquals(56, calc.solver(9, 5));
+        assertEquals(56, calc.calculateExpression(9, 5));
     }
 }
